@@ -1,0 +1,58 @@
+name: pages
+
+on:
+  push:
+    branches: [master, main]
+  workflow_dispatch:
+
+# One deploy at a time; a queued run supersedes a waiting one rather than
+# stacking up behind it.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      # The site is the thing being deployed, so it does not ship unless the
+      # tanks are green. Same gates as the verify workflow.
+      - run: npm run lint
+      - run: npm test
+      # Regenerate from the atom library so the deployed pages can never drift
+      # from it, then fail if the commit was not already in that state.
+      - run: npm run build
+      - run: git diff --exit-code -- index.html atoms.html counterparts.html
+      # Stage the four pages, plus the invariants module checks.html imports
+      # and fetches at run time. Nothing else in the repo is a served file.
+      - name: Assemble dist
+        run: |
+          mkdir -p dist/tools
+          cp index.html atoms.html counterparts.html checks.html dist/
+          cp tools/invariants.mjs dist/tools/
+          cp .nojekyll dist/
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

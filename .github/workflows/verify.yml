@@ -1,0 +1,28 @@
+name: verify
+
+on:
+  pull_request:
+  push:
+    branches: [master, main]
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      # ESLint is the only dependency in the repo, and npm ci keeps CI on the
+      # exact tree the lockfile pins.
+      - run: npm ci
+      - run: npm run lint
+      # The invariants, under node:test — the same rules checks.html runs in a
+      # browser. This is the run that gates the deploy.
+      - run: npm test
+      # The committed pages must be what the generators produce, or the atom
+      # library has quietly stopped being the source of truth.
+      - run: npm run build
+      - run: git diff --exit-code -- index.html atoms.html counterparts.html

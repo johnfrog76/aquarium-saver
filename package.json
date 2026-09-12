@@ -1,0 +1,38 @@
+{
+  "name": "aquarium-saver",
+  "version": "0.1.0",
+  "private": false,
+  "description": "An aquarium in pure SVG and CSS that runs on its own slow clocks and never asks you for anything. A screen worth leaving open.",
+  "keywords": [
+    "aquarium",
+    "screensaver",
+    "svg",
+    "css-animation",
+    "aquascape",
+    "no-javascript"
+  ],
+  "license": "MIT",
+  "author": "John Webster",
+  "type": "module",
+  "homepage": "https://johnfrog76.github.io/aquarium-saver/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johnfrog76/aquarium-saver.git"
+  },
+  "scripts": {
+    "corals": "node tools/coral-gen.mjs",
+    "scapes": "node tools/scapes-gen.mjs",
+    "counterparts": "node tools/counterparts-gen.mjs",
+    "build": "npm run corals && npm run scapes && npm run counterparts",
+    "checks": "node tools/checks.mjs",
+    "test": "node --test \"tools/**/*.test.mjs\"",
+    "lint": "eslint . --max-warnings 0",
+    "lint:fix": "eslint . --fix",
+    "verify": "npm run lint && npm test"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "eslint": "10.9.1",
+    "globals": "17.12.0"
+  }
+}

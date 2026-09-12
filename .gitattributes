@@ -1,0 +1,12 @@
+# LF in the working copy, not just in the index.
+#
+# The generators splice into the pages by matching literal text, newline
+# included: tools/coral-gen.mjs looks for "<!-- CORAL:BEGIN (generated) -->\n"
+# in atoms.html to know where to put the regrown corals. On a Windows clone
+# with core.autocrlf=true that marker comes back as \r\n, the match fails, and
+# `npm run build` dies with "no coral symbol to replace" on a tree that was
+# never touched.
+#
+# Nothing in this repo is read by a tool that wants CRLF, so pin every text
+# file to LF everywhere and the generators see the bytes they wrote.
+* text=auto eol=lf
