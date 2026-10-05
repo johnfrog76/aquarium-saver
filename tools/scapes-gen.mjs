@@ -2,13 +2,13 @@
 //
 // Reads the atom library (the <style> and <defs> of atoms.html) and writes
 // index.html, the landing page: seven tanks composed from the same
-// symbols, in the styles the research named. Nothing here is a new atom; this
+// symbols, in established aquascape styles. Nothing here is a new atom; this
 // is the vocabulary being spoken. One rule holds: salt water and the planted
 // garden never share a tank.
 //
 //   node tools/scapes-gen.mjs
 //
-// Shrimp are salt water only in this vocabulary (John, 2026-09-02).
+// Shrimp are salt water only in this vocabulary.
 
 import { readFileSync, writeFileSync } from "node:fs";
 import { toDocument } from "./page.mjs";
@@ -290,7 +290,7 @@ ${style}
     <div>
       <p class="eyebrow">Places to rest · aquascapes</p>
       <h1>Seven tanks from one vocabulary</h1>
-      <p>The atoms are the words. These are sentences: the aquascape styles the research named, composed from the same symbols and running on the same slow clocks. Four in fresh water, three in salt, and never both in one tank. Each stands in a European living room at night, lit only by its own lamp: a Haussmann flat, a Nordic room, a Vienna room, with houseplants on the floor and on the cabinet. Each is a place you could leave open.</p>
+      <p>The atoms are the words. These are sentences: established aquascape styles, composed from the same symbols and running on the same slow clocks. Four in fresh water, three in salt, and never both in one tank. Each stands in a European living room at night, lit only by its own lamp: a Haussmann flat, a Nordic room, a Vienna room, with houseplants on the floor and on the cabinet. Each is a place you could leave open.</p>
     </div>
     <div class="mechanisms">
       <b>The room</b> — light has a source · low-key, warm-ish · something moves below attention · nothing asks you for anything<br>

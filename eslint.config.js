@@ -11,7 +11,7 @@ import globals from "globals";
  *
  * Flat config, ESLint's recommended set, node globals. No plugins, because a
  * repo whose whole claim is "zero dependencies at run time" should not need a
- * dependency tree to check five files.
+ * dependency tree to check eight files.
  */
 export default [
   { ignores: ["node_modules/**", "dist/**", "*.html"] },
@@ -28,7 +28,7 @@ export default [
       ...js.configs.recommended.rules,
       // The generators keep long explanatory comments about the clocks and the
       // scene grammar, and name a few scene parts they do not place yet. An
-      // underscore is the opt-out, the same convention the sibling repos use.
+      // underscore is the opt-out.
       "no-unused-vars": ["error", { argsIgnorePattern: "^_", varsIgnorePattern: "^_" }],
       // The generators find their splice points by matching atoms.html's literal
       // text, indentation included — those runs of spaces in the regexes are the
