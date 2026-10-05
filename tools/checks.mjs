@@ -1,4 +1,4 @@
-// The family's proof block, at a terminal: run the checks yourself.
+// The checks page, at a terminal: run the checks yourself.
 //
 // The pages carry no script, so the invariants that make a tank restful are
 // checked here, over the HTML, by node. Each check prints one line; the

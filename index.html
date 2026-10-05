@@ -30,7 +30,7 @@
     --cabinet-lip: #262038;
     --ink:         #d9d4e6;
     --muted:       #8f88a8;
-    --accent:      #62e6ff;   /* family teal; here it is the clam's mantle */
+    --accent:      #62e6ff;   /* the teal accent; here, the clam's mantle */
 
     --lamp:        #ffe0b0;   /* the one light source                     */
     --lamp-hot:    #fff6e6;
@@ -93,7 +93,7 @@
   .mechanisms { font-family: "IBM Plex Mono", Consolas, monospace; font-size: 12.5px; line-height: 1.7; color: var(--muted); }
   .mechanisms b { color: var(--ink); font-weight: 400; }
 
-  /* the tank is the hero: a 16:9 stage, exactly the deck's frame */
+  /* the tank is the hero: a 16:9 stage */
   .stage { width: 100%; aspect-ratio: 16 / 9; display: block; border-radius: 4px; overflow: hidden; }
 
   .note { margin: 18px 0 44px; color: var(--muted); font-size: 14px; max-width: 70ch; }
@@ -214,7 +214,7 @@
     <div>
       <p class="eyebrow">Places to rest · aquascapes</p>
       <h1>Seven tanks from one vocabulary</h1>
-      <p>The atoms are the words. These are sentences: the aquascape styles the research named, composed from the same symbols and running on the same slow clocks. Four in fresh water, three in salt, and never both in one tank. Each stands in a European living room at night, lit only by its own lamp: a Haussmann flat, a Nordic room, a Vienna room, with houseplants on the floor and on the cabinet. Each is a place you could leave open.</p>
+      <p>The atoms are the words. These are sentences: established aquascape styles, composed from the same symbols and running on the same slow clocks. Four in fresh water, three in salt, and never both in one tank. Each stands in a European living room at night, lit only by its own lamp: a Haussmann flat, a Nordic room, a Vienna room, with houseplants on the floor and on the cabinet. Each is a place you could leave open.</p>
     </div>
     <div class="mechanisms">
       <b>The room</b> — light has a source · low-key, warm-ish · something moves below attention · nothing asks you for anything<br>
@@ -837,7 +837,7 @@
            tube in sight: a diffuser hidden in the plants, and a trail that comes out of nowhere. Origin at the source.
            Each bubble is a <g> wearing the clock, not a bare <circle>: a CSS animation on an SVG geometry
            element does not run inside a <use> shadow tree when the symbols are mounted from a separate
-           <svg><defs>, which is how a consumer like the deck lifts this library. Animate the group. -->
+           <svg><defs>, which is how a page that reuses this library mounts it. Animate the group. -->
       <symbol id="bubbles" overflow="visible">
         <g fill="rgba(235,250,255,.9)" stroke="rgba(255,255,255,.35)" stroke-width="1">
           <g class="bubble" style="--d:6.1s;--p:-1.2s;--wx:17px"><circle cx="-5.7" cy="-4" r="3.0"/></g>

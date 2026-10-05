@@ -1,10 +1,10 @@
 // Tank and skeleton.
 //
-// John's question (2026-09-02): do the close compositions have a counterpart
+// The question: do the close compositions have a counterpart
 // in the web? This page answers it in pictures. Five atom compositions from
 // the library, and beside each one the UX skeleton it rhymes with: the grey
 // placeholder blocks a page shows before its content arrives, drawn in the
-// atom's silhouette. These pairs are the close slides of the deck.
+// atom's silhouette.
 //
 //   node tools/counterparts-gen.mjs
 
@@ -128,7 +128,7 @@ ${style}
     <div>
       <p class="eyebrow">Places to rest · counterparts</p>
       <h1>Tank and skeleton</h1>
-      <p>Do the close compositions have a counterpart in the web? Five of them, and beside each the UX skeleton it rhymes with: the grey placeholder blocks a page shows before its content arrives, drawn in the atom's silhouette. Same lamp, same hierarchy, same layers, same range, same settled foreground. These pairs are the close slides of the deck, the beats between the tanks.</p>
+      <p>Do the close compositions have a counterpart in the web? Five of them, and beside each the UX skeleton it rhymes with: the grey placeholder blocks a page shows before its content arrives, drawn in the atom's silhouette. Same lamp, same hierarchy, same layers, same range, same settled foreground. These pairs are the beats between the tanks.</p>
     </div>
     <div class="mechanisms">
       <b>Left</b> — the composition from the atom page, running on its own clocks<br>

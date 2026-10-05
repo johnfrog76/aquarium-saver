@@ -1,6 +1,6 @@
-# The house rules the sibling repos keep in .prettierrc.json — two spaces, LF,
-# utf-8 — written where an editor can read them, since this repo deliberately
-# has no formatter in its dependency tree.
+# The formatting rules — two spaces, LF, utf-8 — written where an editor can
+# read them, since this repo deliberately has no formatter in its dependency
+# tree.
 root = true
 
 [*]
