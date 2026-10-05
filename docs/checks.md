@@ -6,9 +6,9 @@ ways to run those checks.
 ## What is checked
 
 The claims the project makes are narrow and mechanical, so they are checked
-rather than asserted: no page carries a script, no room clock is under seven
-seconds or a two-stop metronome, every clocked instance starts mid-cycle,
-every tank has exactly one light, reduced motion stops everything, and the two
+rather than asserted: no tank page carries a script, no room clock is under
+seven seconds or a two-stop metronome, every coral and every bubble carries
+its own clock and phase, every tank has exactly one light, reduced motion stops everything, and the two
 worlds never meet. The rules behind those claims are described in
 [The room clock](clocks.md) and [The seven tanks](tanks.md#two-worlds-one-rule).
 
@@ -23,7 +23,8 @@ One set of rules, three ways to run them:
 - **[checks.html](https://johnfrog76.github.io/aquarium-saver/checks.html)**
   runs them **in your browser**, against the pages this site is actually
   serving — it fetches them and imports the very same `tools/invariants.mjs`.
-  If a tank breaks and ships anyway, that page goes red on its own.
+  It runs when you press its button, so if a tank breaks and ships anyway,
+  the next person to press it sees red.
 
 The checks get their own page because the three tank pages carry no script at
 all, and that is the point of them. Nothing runs while you are watching a tank.

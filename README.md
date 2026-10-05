@@ -32,7 +32,7 @@ left to decode, nothing that asks. It is for anyone who wants that on a screen
 they leave open, and for anyone curious how far SVG and CSS go with no script.
 
 - **[Try it](https://johnfrog76.github.io/aquarium-saver/)** — no install
-- MIT licensed, pure SVG and CSS, zero dependencies, zero JavaScript at run time
+- MIT licensed, pure SVG and CSS, no runtime dependencies, no JavaScript on a tank page
 - **Don't take our word for it — [run the tests yourself](https://johnfrog76.github.io/aquarium-saver/checks.html)**,
   live, in your browser — or `npm test` at a terminal, which is what CI gates on
 
@@ -53,15 +53,16 @@ they leave open, and for anyone curious how far SVG and CSS go with no script.
 There is nothing to build for a visitor: the pages are the artefact. Open
 `index.html` in a browser, or [try it live](https://johnfrog76.github.io/aquarium-saver/).
 
-There are no runtime dependencies, and the only dev dependency is ESLint.
+There are no runtime dependencies; the only dev dependencies are ESLint and
+its two config packages, `@eslint/js` and `globals`.
 
 ```bash
 npm ci
 npm test           # the invariants, under node:test
 npm run checks     # the same invariants, one printed line each
-npm run lint       # eslint over tools/ — the pages have no script to lint
+npm run lint       # eslint over tools/ and its own config — the pages are skipped
 npm run verify     # lint + test
-npm run build      # regenerate the three pages from the atom library
+npm run build      # regrow the corals, then rewrite index and counterparts
 ```
 
 `npm run build` must leave the tree clean: the committed pages are exactly what
@@ -81,7 +82,7 @@ are:
 | Fish behaviour, flocking, collision | **Not modelled** — every motion is a CSS clock |
 | Sound | **None** |
 | An OS screen saver binary (`.scr`, `.saver`) | **Not supported** — open the page full-screen |
-| A build step for the visitor | **None** — the three pages are the artefact |
+| A build step for the visitor | **None** — the committed pages are the artefact |
 
 ## Licence
 

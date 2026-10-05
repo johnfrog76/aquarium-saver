@@ -1,12 +1,15 @@
 # The room clock
 
-This page covers the motion and lighting rules every tank follows. Everything
-that moves moves on the room's own clock, and the rules are what make the tank
-restful rather than busy.
+This page covers the motion and lighting rules every tank follows. The room
+has its own clocks, and the rules are what make the tank restful rather than
+busy.
 
-- **No period under seven seconds.** Corals pulse on 7.3, 9.1, 11.7 and 13.2
-  second clocks; the clam breathes over 9.3 with the exhale held; a discus
-  drifts over 43; a school over 37; a pearl grows for most of 37 to 47.
+- **No room clock under seven seconds.** Corals pulse on clocks between 7.3
+  and 13.2 seconds; the clam breathes over 9.3 with the exhale held; a discus
+  drifts over 43; a school over 37; a pearl grows for most of 37 to 47. The
+  floor is the room's, not an atom's: a fin's flutter, a tail's wag, a
+  shrimp's antenna twitch and a bubble's rise are motions inside one atom,
+  and run faster.
 - **Uneven keyframes, and more rest than motion.** A coral spends more than
   half its cycle between beats. A fish drifts to a pause it has reached and
   stays there. Nothing stops dead.

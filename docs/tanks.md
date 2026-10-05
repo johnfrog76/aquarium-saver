@@ -38,8 +38,8 @@ Salt water and the planted garden never share a tank.
 | a warm pendant, a CO₂ trail, pearling leaves | a blue LED bar, whiter sand |
 
 CO₂ and pearling belong to fresh water; shrimp belong to salt. This is not a
-style guide, it is a check — `tools/invariants.mjs` fails the build if a tank
-ever mixes the two. [How the checks run](checks.md) has the whole list.
+style guide, it is a check — a rule in `tools/invariants.mjs` fails CI, and
+so blocks the deploy, if a tank ever mixes the two. [How the checks run](checks.md) has the whole list.
 
 ## Counterparts
 
